@@ -20,7 +20,6 @@ function App() {
    <NoteState>
     <Router>
       <Navbar/>
-      {alert && <Alert/>}
       <Routes>
             <Route exact path="/" element={<Start/>}/>
             <Route exact path="/home" element={<Home/>}/>

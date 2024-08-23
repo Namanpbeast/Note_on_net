@@ -1,0 +1,48 @@
+
+.note-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align the form to the top */
+    height: auto; /* Changed to auto to adjust based on content height */
+    min-height: 80vh; /* Minimum height for a balanced view */
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/paper-1.png');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 20px; /* Added some padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px; /* Reduced bottom margin */
+    margin-top: 5px; /* Added some top margin for better spacing */
+  }
+  
+  @media (max-width: 768px) {
+    .note-container {
+      padding: 15px;
+      min-height: auto; /* Ensures the container adjusts on smaller screens */
+    }
+  }
+  
+  
+  .note-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Decreased padding inside the form */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    margin-top: 20px; /* Decreased top margin */
+  }
+  
+  .note-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px; /* Decreased bottom margin */
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+
+
+  
+  
