@@ -62,8 +62,9 @@ const AddNote = () => {
           <button
             disabled={note.description.length < 5 || note.title.length < 5}
             type="submit"
-            className="btn btn-submit"
+            className="btn custom-btn"
             onClick={handleClick}
+            
           >
             Submit
           </button>

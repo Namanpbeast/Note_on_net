@@ -1,0 +1,16 @@
+.custom-btn {
+    background-color: #000; /* Dark background for buttons */
+    color: #f8f9fa; /* Light text color */
+    border-radius: 30px; /* Rounded button corners */
+    padding: 10px 20px; /* Button padding */
+    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-size: 1rem;
+    letter-spacing: 1px; /* Spacing between letters */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+  }
+  
+  .custom-btn:hover {
+    background-color: #4ca1af; /* Change background color on hover */
+    transform: translateY(-3px); /* Slightly raise button on hover */
+  }
+  

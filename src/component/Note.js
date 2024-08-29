@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect, useRef } from 'react';
 import NoteContext from '../context/noteContext';
 import NoteItem from './NoteItem';
 import AddNote from './AddNote';
+import { FaStickyNote, FaPen, FaTags } from 'react-icons/fa';
 import './Note.css'; // Import custom CSS file
 
 const Note = () => {
@@ -50,33 +51,65 @@ const Note = () => {
       </button>
 
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">Update Note</h5>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div className="modal-body">
-              <div className="mb-3">
-                <label htmlFor="title" className="form-label">Title</label>
-                <input type="text" className="form-control" value={currentNote.title} id="title" name="title" onChange={onChange} />
+      <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title note-heading" id="exampleModalLabel">Update Note</h5>
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div className="modal-body">
+            <form className='note-form-fields'>
+              <div className="mb-3 input-group">
+                <span className="input-group-text icon-container"><FaStickyNote /></span>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="title"
+                  name="title"
+                  value={currentNote.title}
+                  onChange={onChange}
+                  placeholder="Enter note title"
+                />
               </div>
-              <div className="mb-3">
-                <label htmlFor="description" className="form-label">Description</label>
-                <input type="text" name="description" value={currentNote.description} className="form-control" id="description" onChange={onChange} />
+              <div className="mb-3 input-group">
+                <span className="input-group-text icon-container"><FaPen /></span>
+                <input
+                  type="text"
+                  name="description"
+                  className="form-control"
+                  id="description"
+                  value={currentNote.description}
+                  onChange={onChange}
+                  placeholder="Enter note description"
+                />
               </div>
-              <div className="mb-3">
-                <label htmlFor="tag" className="form-label">Tag</label>
-                <input type="text" className="form-control" value={currentNote.tag} name="tag" id="tag" onChange={onChange} />
+              <div className="mb-3 input-group">
+                <span className="input-group-text icon-container"><FaTags /></span>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="tag"
+                  id="tag"
+                  value={currentNote.tag}
+                  onChange={onChange}
+                  placeholder="Enter note tag"
+                />
               </div>
-            </div>
-            <div className="modal-footer">
-              <button type="button" ref={refCL} className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button disabled={currentNote.description.length < 5 || currentNote.title.length < 5} type="button" className="btn btn-primary" onClick={handleClick}>Update</button>
-            </div>
+            </form>
+          </div>
+          <div className="modal-footer">
+            <button 
+              disabled={currentNote.description.length < 5 || currentNote.title.length < 5} 
+              type="button" 
+              className="btn custom-btn" 
+              onClick={handleClick}>
+              Update
+            </button>
           </div>
         </div>
       </div>
+    </div>
+
 
       <div className='notes-container'>
         <h2 className='my-3'>Your Notes</h2>

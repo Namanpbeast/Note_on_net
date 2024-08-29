@@ -1,0 +1,48 @@
+.signup-container {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: #f8f9fa;
+  }
+
+  .app-title {
+    text-align: center;
+    margin-bottom: 50px; /* Space between title and buttons */
+  }
+  
+  .app-title h1 {
+    font-family: 'Montserrat', sans-serif; /* Modern, clean font */
+    font-size: 3rem; /* Large font size for emphasis */
+    color: #f8f9fa; /* Light color for contrast against dark background */
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 2px; /* Increase letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  .app-title p {
+    font-family: 'Open Sans', sans-serif; /* Sleek, readable font */
+    font-size: 1.25rem; /* Medium font size for the tagline */
+    color: #dcdcdc; /* Slightly darker color for contrast */
+    margin-top: 10px;
+    letter-spacing: 1px; /* Spacing between letters */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .custom-btn {
+    background-color: #000; /* Dark background for buttons */
+    color: #f8f9fa; /* Light text color */
+    border-radius: 30px; /* Rounded button corners */
+    padding: 10px 20px; /* Button padding */
+    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-size: 1rem;
+    letter-spacing: 1px; /* Spacing between letters */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+  }
+  
+  .custom-btn:hover {
+    background-color: #4ca1af; /* Change background color on hover */
+    transform: translateY(-3px); /* Slightly raise button on hover */
+  }
+  

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-
+import React, { useContext } from 'react';
 import NoteContext from '../context/noteContext';
+import './NoteItem.css';  // Import the CSS file
 
 const NoteItem = (props) => {
   const { note, updateClick } = props;
@@ -11,19 +11,26 @@ const NoteItem = (props) => {
     updateClick(note);
   }
 
-
   return (
     <div className="col-md-3 mx-3 my-3">
-      <div className="card" style={{ width: "18rem" }}>
-        <div className="card-body">
-          <h5 className="card-title">{note.title}</h5>
-          <i className="fa-solid fa-trash " onClick={() => deleteNote(note._id)}></i>
-          <i className="fa-solid fa-pen-to-square mx-3" onClick={update}></i>
-          <p className="card-text">{note.description}</p>
+      <div className="card note-card">
+        <div className="card-body note-card-body">
+          <h5 className="note-title">{note.title}</h5>
+          <div className="note-icons">
+            <i 
+              className="fa-solid fa-trash note-icon-trash" 
+              onClick={() => deleteNote(note._id)}
+            ></i>
+            <i 
+              className="fa-solid fa-pen-to-square note-icon-edit" 
+              onClick={update}
+            ></i>
+          </div>
+          <p className="note-description">{note.description}</p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default NoteItem
+export default NoteItem;

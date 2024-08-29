@@ -5,7 +5,7 @@
     align-items: flex-start; /* Align the form to the top */
     height: auto; /* Changed to auto to adjust based on content height */
     min-height: 80vh; /* Minimum height for a balanced view */
-    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/paper-1.png');
+    background: linear-gradient(to bottom right, #2C3E50, #4CA1AF);
     background-size: cover;
     background-position: center;
     background-color: rgba(255, 255, 255, 0.9);
@@ -40,6 +40,21 @@
     margin-bottom: 15px; /* Decreased bottom margin */
     color: #333;
     font-family: 'Arial', sans-serif;
+  }
+  .custom-btn {
+    background-color: #000; /* Dark background for buttons */
+    color: #f8f9fa; /* Light text color */
+    border-radius: 30px; /* Rounded button corners */
+    padding: 10px 20px; /* Button padding */
+    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    font-size: 1rem;
+    letter-spacing: 1px; /* Spacing between letters */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+  }
+  
+  .custom-btn:hover {
+    background-color: #4ca1af; /* Change background color on hover */
+    transform: translateY(-3px); /* Slightly raise button on hover */
   }
   
 

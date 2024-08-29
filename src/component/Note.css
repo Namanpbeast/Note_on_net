@@ -9,11 +9,15 @@ body {
   }
   
   .notes-container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(to bottom right, #2C3E50, #4CA1AF);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 15px;
     margin-top: 5px; /* Further reduced top margin */
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    color: white;
   }
   
   
@@ -107,5 +111,87 @@ body {
     font-size: 1.1rem;
     color: #777;
   }
+  /* Note Container Styling */
+.note-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.note-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Field Styling */
+.note-form-fields .input-group {
+  margin-bottom: 15px;
+}
+
+.icon-container {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px 0 0 5px;
+}
+
+.input-group .form-control {
+  border-left: none;
+}
+
+.custom-btn {
+  background-color: #000;
+  color: #f8f9fa;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: #4ca1af;
+  transform: translateY(-3px);
+}
+
+/* Start.css */
+
+/* General styles for buttons and inputs */
+.btn.custom-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.btn.custom-btn:hover {
+  background-color: #0056b3;
+}
+
+.input-group-text.icon-container {
+  background-color: #f8f9fa;
+  border-radius: 50%;
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+/* Modal-specific styles */
+.modal-content {
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.note-heading {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
   
   
