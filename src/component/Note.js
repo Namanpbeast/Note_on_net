@@ -28,7 +28,9 @@ const Note = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    refCL.current.click();
+    if (refCL.current) {
+      refCL.current.click();
+    }
     updateNote(currentNote.id, currentNote.title, currentNote.description, currentNote.tag);
     setCurrentNote({
       id: "",
@@ -37,6 +39,7 @@ const Note = () => {
       tag: ""
     });
   };
+  
 
   const onChange = (e) => {
     setCurrentNote({ ...currentNote, [e.target.name]: e.target.value });
@@ -98,7 +101,7 @@ const Note = () => {
             </form>
           </div>
           <div className="modal-footer">
-            <button 
+            <button ref={refCL}
               disabled={currentNote.description.length < 5 || currentNote.title.length < 5} 
               type="button" 
               className="btn custom-btn" 

@@ -1,4 +1,4 @@
-const connectToDB=require('./db');
+const connectToDB=require('./config/dbConnect');
 const express = require('express')
 const cors = require('cors');
 
