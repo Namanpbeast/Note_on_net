@@ -1,63 +1,54 @@
-
 .note-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align the form to the top */
-    height: auto; /* Changed to auto to adjust based on content height */
-    min-height: 80vh; /* Minimum height for a balanced view */
-    background: linear-gradient(to bottom right, #2C3E50, #4CA1AF);
-    background-size: cover;
-    background-position: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px 20px; /* Added some padding for better spacing */
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 5px; /* Reduced bottom margin */
-    margin-top: 5px; /* Added some top margin for better spacing */
-  }
-  
-  @media (max-width: 768px) {
-    .note-container {
-      padding: 15px;
-      min-height: auto; /* Ensures the container adjusts on smaller screens */
-    }
-  }
-  
-  
-  .note-form {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px; /* Decreased padding inside the form */
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    width: 100%;
-    margin-top: 20px; /* Decreased top margin */
-  }
-  
-  .note-heading {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 15px; /* Decreased bottom margin */
-    color: #333;
-    font-family: 'Arial', sans-serif;
-  }
-  .custom-btn {
-    background-color: #000; /* Dark background for buttons */
-    color: #f8f9fa; /* Light text color */
-    border-radius: 30px; /* Rounded button corners */
-    padding: 10px 20px; /* Button padding */
-    font-family: 'Montserrat', sans-serif; /* Consistent font */
-    font-size: 1rem;
-    letter-spacing: 1px; /* Spacing between letters */
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
-  }
-  
-  .custom-btn:hover {
-    background-color: #4ca1af; /* Change background color on hover */
-    transform: translateY(-3px); /* Slightly raise button on hover */
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Space between the AddNote and Todo */
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #2C3E50, #4CA1AF); /* Original background */
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh; /* Minimum height to cover the page */
+}
 
+/* AddNote and Todo should take up equal space on larger screens */
+.note-form,
+.todo-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Keep the cards' white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  flex-basis: 48%; /* Take up 48% width each */
+  max-width: 48%; /* Ensures the cards don't exceed half of the width */
+}
 
-  
-  
+.note-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .note-form,
+  .todo-container {
+      flex-basis: 100%; /* Take full width on smaller screens */
+      max-width: 100%;
+      margin-bottom: 20px; /* Add spacing between them vertically */
+  }
+}
+
+.custom-btn {
+  background-color: #000; /* Dark background for buttons */
+  color: #f8f9fa; /* Light text color */
+  border-radius: 30px; /* Rounded button corners */
+  padding: 10px 20px; /* Button padding */
+  font-family: 'Montserrat', sans-serif; /* Consistent font */
+  font-size: 1rem;
+  letter-spacing: 1px; /* Spacing between letters */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.custom-btn:hover {
+  background-color: #4ca1af; /* Change background color on hover */
+  transform: translateY(-3px); /* Slightly raise button on hover */
+}

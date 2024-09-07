@@ -11,7 +11,6 @@ import NoteState from './context/NoteState';
 import Login from './component/Login';
 import Signup from './component/Signup';
 import Start from './component/Start';
-import Alert from './component/Alert';
 
 function App() {
   

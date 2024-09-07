@@ -2,9 +2,10 @@ const Notes = require('../models/Notes');
 const { validationResult } = require('express-validator');
 
 exports.fetchNotes=async (req, res) => {
-    console.log("Fetch Call")
+    //console.log("Fetch Call")
     try {
         const notes = await Notes.find({ user: req.user.id });
+        //console.log(req.user.id);
         res.json(notes);
     } catch (error) {
         console.error(error);

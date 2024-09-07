@@ -13,6 +13,7 @@ app.use(express.json())
 // respond with "hello world" when a GET request is made to the homepage
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes', require('./routes/note'))
+app.use('/api/todos', require('./routes/todo'));
 
 app.listen(port,()=>{
     console.log(`The app has been listened at http://localhost:${port}`)

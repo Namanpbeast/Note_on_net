@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import NoteContext from '../context/noteContext';
 import { FaStickyNote, FaTags, FaPen } from 'react-icons/fa'; // Importing icons
 import './AddNote.css'; // Importing updated custom CSS
+import Todo from './Todo';
 
 const AddNote = () => {
   const [note, setNote] = useState({ title: "", description: "", tag: "" });
@@ -64,12 +65,12 @@ const AddNote = () => {
             type="submit"
             className="btn custom-btn"
             onClick={handleClick}
-            
           >
             Submit
           </button>
         </form>
       </div>
+      <Todo />
     </div>
   )
 }

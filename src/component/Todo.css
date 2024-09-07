@@ -1,0 +1,101 @@
+.todo-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* White background for the Todo container */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Reduced width for a more compact layout */
+    /* Center align the container */
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+}
+
+.todo-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.todo-input input {
+    flex-grow: 1;
+    padding: 10px; /* Reduced padding for a smaller input box */
+    font-size: 14px; /* Reduced font size */
+    border: 2px solid #181819;
+    border-radius: 8px;
+    margin-right: 8px; /* Slightly reduced margin for better alignment */
+}
+
+.todo-input button {
+    padding: 10px; /* Reduced padding for button */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; /* Adjusted font size for the icon */
+}
+
+.todo-input button:hover {
+    background-color: #4ca1af;
+    transform: translateX(-3px);
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px; /* Reduced padding for a smaller list item */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Reduced font size for list items */
+}
+
+.todo-item:hover {
+    background-color: #f1f1f1;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 8px; /* Reduced gap between buttons */
+}
+
+.complete-button, .delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #3b8fe8;
+    font-size: 16px; /* Reduced font size for icons */
+    padding: 5px; /* Added padding for better spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.complete-button:hover {
+    color: rgb(35, 224, 35);
+}
+
+.delete-button:hover {
+    color: red;
+}

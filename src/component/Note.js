@@ -1,9 +1,10 @@
 import React, { useContext, useState, useEffect, useRef } from 'react';
 import NoteContext from '../context/noteContext';
 import NoteItem from './NoteItem';
-import AddNote from './AddNote';
 import { FaStickyNote, FaPen, FaTags } from 'react-icons/fa';
 import './Note.css'; // Import custom CSS file
+
+import AddNote from './AddNote';
 
 const Note = () => {
   const [currentNote, setCurrentNote] = useState({ id: "", title: "", description: "", tag: "" });
@@ -47,7 +48,7 @@ const Note = () => {
 
   return (
     <>
-      <AddNote />
+      <AddNote/>
 
       <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
@@ -123,6 +124,8 @@ const Note = () => {
           })}
         </div>
       </div>
+
+      
     </>
   );
 };
